@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Games {% endblock %}</h1>
+    {% for game in games %}
+        <div class='game'>
+            <h3>#{{ game[0] }} - {{ game[1] }} BY {{ game[2] }}</h3>
+            <i><p>({{ game[3] }} hours)</p></i>
+            <p class='review'>{{ game[4] }}</p>
+            <i><p>Added {{ game[5] }}</p></i>
+        </div>
+    {% endfor %}
+{% endblock %}
